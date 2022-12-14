@@ -1,0 +1,29 @@
+stages:
+    - build
+    - test
+    - unit
+
+build application:
+    image: node:18-alpine
+    stage: build
+    script:
+        - yarn install
+        - yarn build
+        - yarn test src/App.test.js
+    artifacts:
+        paths:
+            - build
+
+
+test application:
+    image: alpine
+    script:
+        - test -f build/index.html
+
+unit test:
+    image: node:18-alpine
+    stage: unit
+    script:
+        - yarn install
+        - yarn test
+
