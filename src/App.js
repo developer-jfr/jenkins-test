@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with Bakai Terraform
+          Learn React with Bakai
         </a>
       </header>
     </div>
