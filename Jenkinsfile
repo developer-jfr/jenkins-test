@@ -14,5 +14,10 @@ pipeline {
 
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'echo "Deployed to AWS EC2 instance..."'
+            }
+        }
     }
 }
